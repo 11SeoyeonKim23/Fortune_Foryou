@@ -5,6 +5,29 @@
 <head>
     <meta charset="utf-8">
     <link rel = "stylesheet" type="text/css" href="css/index2.css">
+    
+    <script language="javascript">
+    function validate() {
+    	var form = document.info;
+
+        var user_name=document.forms['info']["user_name"].value;
+        var user_mail=document.forms['info']["user_mail"].value;
+        var user_birth=document.forms['info']["user_birth"].value;
+        
+        if(user_name==""||user_name==null) {
+            alert("이름을 입력해 주세요");
+            join.user_name.focus();
+            return false;
+        	}
+        if(user_mail==""||user_name==null) {
+            alert("메일을 입력해 주세요");
+            join.user_mail.focus();
+            return false;
+        	}
+        form.submit();
+    }
+    </script>
+    
 	<a href="index2.jsp"><img src="img/logo.png"></a>
     <br>
     &nbsp; &nbsp; &nbsp;당신이 궁금해 하던 모든것
@@ -68,7 +91,6 @@
         내 비밀번호가 뚫리는데까지 걸리는 시간을 측정해보세요!
     </a>          
     </li>
-        </center>
   </ul>
   <p class="pos">
     <label for="pos1"></label>
@@ -78,11 +100,10 @@
   </p>
 </div>
     <br>
-    <center>
     <div>
         <p class="info">정보 입력</p>
         <br>
-		<form action="total_fortune" method="post">
+		<form name="info" method="post" action="total_fortune.jsp">
     <div>
         >이름 :
         <input type="text" id="user_name" name="user_name" placeholder="김미림"/>
@@ -90,7 +111,7 @@
         <br>
     <div>
         >이메일 : 
-    <input type="text" id="mail" name="user_mail"/>
+    <input type="text" id="user_mail" name="user_mail"/>
         @
         <select>
         <option>naver.com</option>
@@ -101,12 +122,12 @@
         <br>
     <div>
         >생년월일 : 
-    <input type="text" id="birth" name="user_birth" placeholder="ex)010101"/>
+    <input type="text" id="user_birth" name="user_birth" placeholder="ex)010101"/>
     </div>
     <br><br>   
     <br>
     <div class="button">
-        <button onclick = "location.href='total_fortune.jsp'">
+        <button type="button" value="submit_btn" onclick="validate()">
             CHECK MY FORTUNE
     </button>
     </div>
