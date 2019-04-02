@@ -1,0 +1,85 @@
+@charset "EUC-KR";
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+p{font-family: 'NanumSquare',sans-serif;
+    font-weight: 100;
+    font-size: 30pt;
+    color:#333;
+}
+footer{
+	background-color:#FEF494;
+}
+div{
+   .div {display:table; width:300px; height:200px;}
+   .p {display:table-cell; text-align:center; vertical-align:middle;}
+}
+
+body{font-family: 'NanumSquare', sans-serif; text-align: center;}
+  *{margin:0;padding:0;}
+  
+  ul,li{list-style:none;}
+  
+ul.ul_menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #FEF494;
+}
+ul:after{
+    content:'';
+    display: block;
+    clear:both;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li.menu:hover:not(.active) {
+    background-color: #FDEE21;
+}
+.active {
+    background-color: #FF6D70;
+}
+
+button{
+  background:#FEF494;
+  color:black;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.1em;
+  padding:0 1.5em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:dimgray;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #FF6D70;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}     

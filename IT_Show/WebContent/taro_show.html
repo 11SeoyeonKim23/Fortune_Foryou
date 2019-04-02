@@ -1,0 +1,66 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" type="text/css" href="css/taro.css">
+    <script language="JavaScript">
+ function random_image()
+ {
+  var myimages = new Array();
+  // 이곳에 출력할 이미지 주소를 계속해서 아래의 방법처럼 기입해 주세요
+  myimages[0] = "img/card0.png";
+  myimages[1] = "img/card1.png";
+  myimages[2] = "img/card2.png";
+  myimages[3] = "img/card3.png";
+  myimages[4] = "img/card4.png";
+  myimages[5] = "img/card5.png";
+  
+  var card_text = new Array();
+  card_text[0] =  "마법사 카드가 나왔군요!<br>당신은 다재다능하고 창조적입니다.<br>그러나 본인 스스로가 자신의 능력을 통제하지 못하는군요<br>자신의 능력을 너무 과시하고 믿지 마세요.";
+  card_text[1] =  "여사제 카드가 나왔군요!<br>당신은 상당히 지혜로운 사람입니다.<br>자신의 감정을 잘 다스릴줄 알며 침착한 편입니다<br>다만 사소한 부분에 결벽적인 성격을 지니며, 이는 자신만 더욱 피로하게 만든답니다.";
+  card_text[2] =  "전차 카드가 나왔군요!<br>당신은 목표를 향한 행동력이 굉장히 강한 사람입니다<br>뜻하는 바를 이루기 위해 굉장히 맹목적인 성격탓에<br>자신을 파괴해가면서까지 목표를 이루려고 합니다.<br>성공과 달성에 너무 집착하지 마세요.";
+  card_text[3] =  "매달린 남자 카드가 나왔군요!<br>이 카드는 친구나 동료를 위해 홀로 누명을 쓰고 처형받는 남자를 뜻하는데,<br>당신이 그만큼 남을 위해 희생하고 헌신한다는 것을 뜻합니다.<br>가끔은 남들보다도 자신을 더 챙기려고 노력하세요.";
+  card_text[4] =  "타워 카드가 나왔군요!<br>이 카드는 예기치 못한 커다란 변화를 뜻합니다.<br>안정적인 상황은 사라지고 새로운 상황에 적응하기 위해 힘든 나날을 보낼 것입니다.<br>매사에 너무 악착같이 매달리지 마시고 주어진 상황을 있는 그대로 받아들이는 자세가 필요합니다.";
+  card_text[5] =  "심판 카드가 나왔군요!<br>당신은 지금 결정을 해야 할 시기입니다.<br>잘못한 일은 사과하고 용서 받아야 하며 발전을 위해 더욱 힘써야 합니다.<br>이는 당신의 삶을 바꿔놓을 큰 계기가 될 것입니다.";
+  
+  var ran_card = Math.floor( Math.random() * (myimages.length-1) );
+  document.write("<img src=" + myimages[ran_card] + " width=240px>");
+  document.write("<br><br>" + card_text[ran_card]);
+ }
+</script>
+
+    <img src="img/logo.png">
+    <br>
+    &nbsp; &nbsp; &nbsp;당신이 궁금해 하던 모든것
+</head>
+    <br>
+    <br>
+<body>
+     <ul class="ul_menu">
+      <li class="menu"><a class="menu" href="index.html">2019 총 운세</a></li>
+      <li class="menu"><a class="menu" href="love_fortune.html">연애운</a></li>
+      <li class="menu"><a class="menu" href="job_fortune.html">취업운</a></li>
+      <li class="menu"><a class="menu" href="study_fortune.html">학업운</a></li>
+      <li class="menu"><a class="active" href="taro.html">타로카드</a></li>
+      <li class="menu"><a class="menu" href="fortune_cookie.html">포츈쿠키</a></li>
+    </ul>
+    <br><br>
+    <script>
+    random_image();
+    </script>
+    <br>
+    <br>
+    <div class="button">
+        <Button type="button" value="submit_btn" onclick="location.href='index.html'"
+        style="font-family: 'NanumSquare',sans-serif;">
+           	 HOME
+    	</button>
+    </div>
+    <br>
+    <br>
+</body>
+<footer>
+<br>| 미림여자정보과학고등학교 뉴미디어솔루션과 김서연 | 010-3368-3449 | catneru@naver.com | ⓒ서연 |
+<br>
+<br>
+</footer>
+</html>

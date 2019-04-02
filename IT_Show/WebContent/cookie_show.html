@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" type="text/css" href="css/taro.css">
+    <script language="JavaScript">
+ function random_image()
+ {
+  var myimages = new Array();
+  // 이곳에 출력할 이미지 주소를 계속해서 아래의 방법처럼 기입해 주세요
+  myimages[0] = "img/cookie1.png";
+  myimages[1] = "img/cookie2.png";
+  myimages[2] = "img/cookie3.png";
+  
+  var ran_card = Math.floor( Math.random() * (myimages.length-1) );
+  document.write("<img src=" + myimages[ran_card] + " width=750px>");
+ }
+</script>
+
+    <img src="img/logo.png">
+    <br>
+    &nbsp; &nbsp; &nbsp;당신이 궁금해 하던 모든것
+</head>
+    <br>
+    <br>
+<body>
+     <ul class="ul_menu">
+      <li class="menu"><a class="menu" href="index.html">2019 총 운세</a></li>
+      <li class="menu"><a class="menu" href="love_fortune.html">연애운</a></li>
+      <li class="menu"><a class="menu" href="job_fortune.html">취업운</a></li>
+      <li class="menu"><a class="menu" href="study_fortune.html">학업운</a></li>
+      <li class="menu"><a class="menu" href="taro.html">타로카드</a></li>
+      <li class="menu"><a class="active" href="fortune_cookie.html">포츈쿠키</a></li>
+    </ul>
+    <script>
+    random_image();
+    </script>
+    <br>
+    <br>
+    <div class="button">
+        <Button type="button" value="submit_btn" onclick="location.href='index.html'"
+        style="font-family: 'NanumSquare',sans-serif;">
+           	 HOME
+    	</button>
+    </div>
+    <br>
+    <br>
+</body>
+<footer>
+<br>| 미림여자정보과학고등학교 뉴미디어솔루션과 김서연 | 010-3368-3449 | catneru@naver.com | ⓒ서연 |
+<br>
+<br>
+</footer>
+</html>
